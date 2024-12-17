@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+About Us
+{% endblock %}
+
+{% block content %}
+<section class="about-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img style="object-fit: cover;width: 100%; max-height: 800px;" src="{% static 'images/hospital-building.jpg' %}" class="img-fluid rounded shadow" alt="Hospital Image">
+            </div>
+            <div class="col-md-6">
+                <h2 class="display-4 text-primary mb-4">Welcome to Hope Life Hospital</h2>
+                <p class="lead text-muted">At Hope Life Hospital, we believe in providing exceptional healthcare services that inspire hope, healing, and health. For over [X] years, we’ve been a beacon of compassionate care for our community.</p>
+                <p class="text-muted">Our state-of-the-art facilities and expert medical team ensure that every patient receives the best care possible, whether they’re visiting for a routine check-up or undergoing complex procedures.</p>
+                <p class="text-muted">Our dedicated healthcare professionals work tirelessly to offer personalized and comprehensive medical treatment, promoting health and healing in an environment of care and comfort.</p>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-md-12 text-center">
+                <h3 class="text-primary mb-4">Our Mission</h3>
+                <p class="lead text-muted">Our mission is to enhance the health and well-being of our community through compassionate, high-quality healthcare. We are committed to providing a supportive and caring environment where patients can receive the best medical treatment possible, guided by a philosophy of personalized care.</p>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-12 text-center">
+                <h3 class="text-primary mb-4">Why Choose Us?</h3>
+                <ul class="list-unstyled bg-light">
+                    <li><i class="text-success"></i> Highly Skilled Medical Team</li>
+                    <li><i class="text-success"></i> State-of-the-Art Technology</li>
+                    <li><i class="text-success"></i> Compassionate Care</li>
+                    <li><i class="text-success"></i> Wide Range of Services</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

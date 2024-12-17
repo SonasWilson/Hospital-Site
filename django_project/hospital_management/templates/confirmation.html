@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Confirmation
+{% endblock %}
+
+{% block content %}
+
+<!-- Section for Confirmation with enhanced styling -->
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <!-- Beautifully styled alert box -->
+            <div class="alert alert-success  text-center p-4 border-0 shadow-lg rounded" role="alert">
+                <h4 class="alert-heading text-success">Appointment Confirmed!</h4>
+                <p class="lead">Thank you for scheduling with us. Your appointment has been successfully booked.</p>
+                <hr>
+                <p class="mb-0">Our team will reach out to you soon with further details. We look forward to assisting you!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

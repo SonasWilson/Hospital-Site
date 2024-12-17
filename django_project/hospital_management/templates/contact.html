@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Contact Us
+{% endblock %}
+
+{% block content %}
+<!-- Contact Page Title -->
+<div class="text-center my-5">
+  <h1 class="display-4 text-primary">Contact Us</h1>
+  <p class="lead text-muted">We are here to assist you with any inquiries or appointments. Feel free to reach out to us!</p>
+  <hr class="w-50 mx-auto">
+</div>
+
+<!-- Contact Information Section -->
+<div class="container mb-5">
+  <div class="row">
+    <!-- Contact Information -->
+    <div class="col-md-6">
+      <h3 class="text-primary">Our Contact Information</h3>
+      <ul class="list-unstyled">
+        <li><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 123 Hope Life Hospital Road, City, Country</li>
+        <li><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> 1234567890</li>
+        <li><i class="fas fa-envelope"></i> <strong>Email:</strong> info@hopelifehospital.com</li>
+      </ul>
+    </div>
+
+    <!-- Google Map Section -->
+    <div class="col-md-6">
+      <h3 class="text-primary">Find Us Here</h3>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAP_EMBED_URL" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Form Section -->
+<div class="container">
+  <h3 class="text-primary text-center mb-4">Send Us a Message</h3>
+  <form method="post" action="{% url 'contact' %}">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-group mt-4">
+      <label for="message">Your Message</label>
+      <textarea class="form-control" id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+    </div>
+
+    <div class="form-group mt-4 text-center">
+      <button type="submit" class="btn btn-primary btn-lg mb-3">Send Message</button>
+    </div>
+  </form>
+</div>
+
+{% endblock %}
